@@ -1,0 +1,44 @@
+<form [formGroup]="form" (ngSubmit)="emitirFiltros($event)" class="row m-5">
+    <div class="filtro-container">
+        <div class="row">
+            <div class="col-sm-3">
+                <div class="form-group ">
+                    <label>Data Inicial:</label>
+                    <input type="date" formControlName="dataInicial" class="form-control">
+                </div>
+            </div>
+            <div class="col-sm-3">
+                <div class="form-group ">
+                    <label>Hora Inicial:</label>
+                    <input type="time" formControlName="horaInicial" class="form-control">
+                </div>
+            </div>
+            <div class="col-sm-3">
+                <div class="form-group">
+                    <label>Data Final:</label>
+                    <input type="date" formControlName="dataFinal" class="form-control">
+                </div>
+            </div>
+            <div class="col-sm-3">
+                <div class="form-group">
+                    <label>Hora Final:</label>
+                    <input type="time" formControlName="horaFinal" class="form-control">
+                </div>
+            </div>
+        </div>
+        <br>
+        <div class="row">
+            <div class="col-sm-6">
+                <div class="form-group">
+                    <label for="pspsSelect" style="margin-right: 10px;">PSPs:</label>
+                    <p-multiSelect class="mSelect" [options]="pspsDisponiveis" [showToggleAll]="true"
+                        [virtualScrollItemSize]="43" formControlName="pspsSelecionados" >
+                    </p-multiSelect>
+                </div>
+            </div>
+            <div class="col-sm-6">
+                <button type="submit" class="btn btn-success pull-right btn-sm" style="width: 100px;background-color: #dc7b36;">Success</button>
+            </div>
+        </div>
+    </div>
+</form>

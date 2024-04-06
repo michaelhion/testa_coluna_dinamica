@@ -1,0 +1,15 @@
+<div *ngIf="headers && data">
+    <p-table [columns]="headers" [value]="data">
+      <ng-template pTemplate="header" let-columns>
+        <tr>
+          <th *ngFor="let col of columns">{{ col }}</th>
+        </tr>
+      </ng-template>
+      <ng-template pTemplate="body" let-rowData let-columns="columns">
+        <tr>
+          <td *ngFor="let col of columns">{{ rowData[col] }}</td>
+        </tr>
+      </ng-template>
+    </p-table>
+  </div>
+  

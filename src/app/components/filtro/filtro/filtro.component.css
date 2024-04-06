@@ -1,0 +1,13 @@
+:host ::ng-deep .mSelect .p-multiselect-label { 
+	width: 250px !important; 
+} 
+
+:host ::ng-deep .mSelect .p-multiselect-item { 
+	
+	font-weight: bold; 
+} 
+
+:host ::ng-deep .mSelect .p-multiselect-trigger { 
+	
+	font-weight: bold; 
+}
